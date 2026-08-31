@@ -1,0 +1,53 @@
+ 
+/* assets/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #00d4ff !important;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00d4ff, #007bff);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .carousel-item img {
+        height: 300px;
+    }
+    .feature-card {
+        margin-bottom: 20px;
+    }
+    .login-card {
+        padding: 20px;
+    }
+}

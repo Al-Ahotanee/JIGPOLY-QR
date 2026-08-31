@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: jigpoly-gps-attendance
+    runtime: docker
+    plan: free
+    healthCheckPath: /health.php
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: APP_ENV
+        value: production

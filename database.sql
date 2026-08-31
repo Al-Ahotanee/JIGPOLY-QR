@@ -1,0 +1,8 @@
+-- JIGPOLY Polytechnic GPS Attendance System
+--
+-- The live PostgreSQL schema and seed data are created automatically by
+-- config/db.php. For Render + Neon, set DATABASE_URL and APP_ENV, then open
+-- /health.php or the main application once.
+--
+-- This file is intentionally not a legacy database script. The live schema
+-- is created by the PHP bootstrap above-mentioned in config/db.php.
