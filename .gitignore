@@ -1,0 +1,5 @@
+/uploads/excuses/*
+!/uploads/excuses/.gitkeep
+.env
+.env.*
+*.log
