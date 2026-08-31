@@ -3,9 +3,15 @@ declare(strict_types=1);
 
 $isProduction = (getenv('APP_ENV') ?: 'production') === 'production';
 date_default_timezone_set('Africa/Lagos');
-ini_set('session.use_strict_mode', '1');
-ini_set('session.cookie_httponly', '1');
-ini_set('session.cookie_samesite', 'Lax');
+// Entry points may call session_start() before loading this bootstrap. PHP emits
+// warnings if session ini settings are changed after a session is active, and
+// those warnings would corrupt JSON API responses. Configure them only when
+// the session has not started yet.
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.use_strict_mode', '1');
+    ini_set('session.cookie_httponly', '1');
+    ini_set('session.cookie_samesite', 'Lax');
+}
 
 $databaseUrl = getenv('DATABASE_URL') ?: '';
 if ($databaseUrl === '') {
